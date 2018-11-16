@@ -147,7 +147,7 @@ def train():
     print("%i / %i / %i sentences in train / dev / test." % (
         len(train_data), 0, len(test_data)))
 
-    train_manager = BatchManager(train_data, FLAGS.batch_size)
+    train_manager = BatchManager(train_data, int(FLAGS.batch_size))
     dev_manager = BatchManager(dev_data, 100)
     test_manager = BatchManager(test_data, 100)
     # make path for store log and model if not exist
